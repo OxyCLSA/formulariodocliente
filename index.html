@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Suporte ao Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 id="form-client">Formulário do Cliente</h1>
+        <form id="supportForm">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,15}" required>
+            </div>
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <select id="produto" name="produto" required>
+                    <option value="">Selecione</option>
+                    <option value="blog">Blog</option>
+                    <option value="curso">Curso</option>
+                    <option value="mentoria">Mentoria</option>
+                    <option value="youtube">YouTube</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipoAtendimento">Tipo de atendimento:</label>
+                <div class="radio-group">
+                    <label class="radio-label" for="ajuda">
+                        <input type="radio" id="ajuda" name="tipoAtendimento" value="ajuda" required>
+                        Ajuda
+                    </label>
+                    <label class="radio-label" for="elogio">
+                        <input type="radio" id="elogio" name="tipoAtendimento" value="elogio">
+                        Elogio
+                    </label>
+                    <label class="radio-label" for="feedback">
+                        <input type="radio" id="feedback" name="tipoAtendimento" value="feedback">
+                        Feedback
+                    </label>
+                </div>
+            </div>
+            <div class="form-group contato-preferencial">
+                <label for="contatoPreferencial">Meio de contato preferencial:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label" for="contatoEmail">
+                        <input type="checkbox" id="contatoEmail" name="contatoPreferencial" value="email">
+                        E-mail
+                    </label>
+                    <label class="checkbox-label" for="contatoTelefone">
+                        <input type="checkbox" id="contatoTelefone" name="contatoPreferencial" value="telefone">
+                        Telefone
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Como podemos te ajudar?</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="anexo">Adicione um anexo:</label>
+                <input type="file" id="anexo" name="anexo">
+                <span id="anexoStatus">Nenhum arquivo escolhido</span>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="privacy-policy">
+        <h2>Política de Privacidade</h2>
+        <p>
+            Para saber mais sobre como tratamos seus dados pessoais, por favor, leia nossa 
+            <a href="privacy-policy.html" target="_blank">Política de Privacidade</a>.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
